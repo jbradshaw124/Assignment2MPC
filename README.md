@@ -4,8 +4,8 @@
         
         <style>
            /*answer button class (. = class, # = id) */
-            #slideBody {
-                background-color: #ddf;
+            Body {
+                background-color: #fdf;
                 height: 100%;
                 width: 100%;
                 
