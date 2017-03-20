@@ -1,4 +1,3 @@
-# Assignment2MPC
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -6,8 +5,19 @@
         
         <style>
             /*answer button class (. = class, # = id) */
-            .answerButtons {
+            #slideBody {
+                background-color: #ddf;
+            }
+            #questionBox {
+                font-family: fantasy;
+                /*height: 400px;*/
+                font-size: 40px;
+            }
+            #musicPlayer {
                 
+            }
+            .answerButtons {
+                background-color: beige;
             }
         </style>
         
@@ -17,7 +27,7 @@
     <body>
         <!--Slide Body-->
 
-        <div id= "SlideBody">
+        <div id= "slideBody">
         
             <div id= "questionBox">
                 question
