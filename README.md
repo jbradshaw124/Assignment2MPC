@@ -1,4 +1,3 @@
-<!DOCTYPE HTML>
 <html>
     <head>
         <title>GCSE Music Quiz</title>
@@ -10,8 +9,8 @@
             }
             #questionBox {
                 font-family: fantasy;
-                /*height: 400px;*/
-                font-size: 40px;
+                
+                font-size: 120px;
             }
             #musicPlayer {
                 
