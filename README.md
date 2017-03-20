@@ -18,7 +18,7 @@
             }
             #musicPlayer {
                 position: absolute;
-                bottom: 220px;  
+                bottom: 210px;  
                 height: 60px;
                 width: 10%;
             }
