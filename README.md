@@ -14,7 +14,7 @@
                 position: absolute;
                 font-family: 'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
                 margin: 20px;
-                font-size: 40px;
+                font-size: 35px;
             }
             #musicPlayer {
                 position: absolute;
@@ -28,6 +28,7 @@
                 height: 50px;
                 width: 100%;
                 font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
+                font-size: 20px;
             }
             #answerA {
                 bottom: 160px; 
@@ -137,7 +138,7 @@
             }
             else if(slideNumber == 6)
             {
-                setupSlide("Which of these terms best descirbes the tempo of the piece?", "Andante", "Allegro", "Presto", "Lento", "audio7.wav");
+                setupSlide("Which term best describes the tempo of the piece?", "Andante", "Allegro", "Presto", "Lento", "audio7.wav");
                 correctButton = 2;
             }
             else if(slideNumber == 7)
@@ -152,7 +153,7 @@
             }
             else if(slideNumber == 9)
             {
-                setupSlide("Which of these terms best describes the way the vocalist is singing?", "Tremolo", "Syllabic", "Vibrato", "Staccato", "audio10.mp3");
+                setupSlide("Name the vocal effect used in the performance?", "Tremolo", "Harmony", "Vibrato", "Whispering", "audio10.mp3");
                 correctButton = 2;
             }
 
