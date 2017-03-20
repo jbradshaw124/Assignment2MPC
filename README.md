@@ -185,7 +185,8 @@
                 slideNumber ++;
                 correctAnswerCount ++;
             }
-            else
+            else if(buttonID != correctButton)
+
             {
                 //var answerCheck = document.getElementById("answerCheck");
                 //answerCheck.innerHTML = "Incorrect!";
