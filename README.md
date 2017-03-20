@@ -191,7 +191,7 @@
                 //var answerCheck = document.getElementById("answerCheck");
                 //answerCheck.innerHTML = "Incorrect!";
                 
-                playFromBufferNumber(incorrect.mp3);
+                //playFromBufferNumber(incorrect.mp3);
                 alert("Incorrect!");
                 //goto next slide
                 slideNumber ++;
