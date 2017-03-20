@@ -31,6 +31,7 @@
                 font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
                 font-size: 20px;
                 font-weight: 900;
+                letter-spacing: 0.5px;
             }
             #answerA {
                 bottom: 160px; 
