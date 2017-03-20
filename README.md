@@ -182,6 +182,7 @@
             {
                 /*audio should play here but it doesnt work
                 playFromBufferNumber("correct.mp3");*/
+                audioPlayer.pause();
                 alert("Correct!");
                 //go to next slide and increment correct answer
                 slideNumber ++;
@@ -194,6 +195,7 @@
                 //answerCheck.innerHTML = "Incorrect!";
                 
                 //playFromBufferNumber(incorrect.mp3);
+                audioPlayer.pause();
                 alert("Incorrect!");
                 //goto next slide
                 slideNumber ++;
