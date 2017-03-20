@@ -15,6 +15,7 @@
                 font-family: 'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
                 margin: 20px;
                 font-size: 35px;
+                text-align: centre;
             }
             #musicPlayer {
                 position: absolute;
@@ -29,6 +30,7 @@
                 width: 100%;
                 font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
                 font-size: 20px;
+                font-weight: 900;
             }
             #answerA {
                 bottom: 160px; 
