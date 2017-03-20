@@ -14,7 +14,7 @@
                 position: absolute;
                 font-family: fantasy;
                 
-                font-size: 50px;
+                font-size: 20px;
             }
             #musicPlayer {
                 position: absolute;
