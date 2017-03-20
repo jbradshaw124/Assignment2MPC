@@ -113,7 +113,7 @@
             }
             else if(slideNumber == 1)
             {
-                setupSlide("Identify the time signature of this piece","4/4", "3/4", "6/8", "12/8", "audio2.wav");
+                setupSlide("Identify the time signature of this piece","4/4", "3/4", "6/8", "12/8", "audio2.mp3");
                 correctButton = 1;
             }
             else if(slideNumber == 2)
