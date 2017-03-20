@@ -108,12 +108,12 @@
                 if(slideNumber == 0)
             {
                 correctAnswerCount = 0;
-                setupSlide("What woodwind instrument can be heard here?","Flute", "Clarinet", "Bassoon", "Oboe", "audio1.mp3");
+                setupSlide("What woodwind instrument can be heard here?","Flute", "Clarinet", "Bassoon", "Oboe", "audio1.wav");
                 correctButton = 3;
             }
             else if(slideNumber == 1)
             {
-                setupSlide("Identify the time signature of this piece","4/4", "3/4", "6/8", "12/8", "audio2.mp3");
+                setupSlide("Identify the time signature of this piece","4/4", "3/4", "6/8", "12/8", "audio2.wav");
                 correctButton = 1;
             }
             else if(slideNumber == 2)
