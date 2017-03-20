@@ -13,7 +13,7 @@
             #questionBox {
                 position: absolute;
                 font-family: 'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
-                
+                margin: 20px;
                 font-size: 40px;
             }
             #musicPlayer {
