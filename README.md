@@ -17,8 +17,7 @@
             }
             .answerButtons {
                 background-color: beige;
-                height: 120px;
-                width: 720px;
+                display: block;
             }
         </style>
         
