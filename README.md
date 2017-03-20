@@ -3,28 +3,43 @@
         <title>GCSE Music Quiz</title>
         
         <style>
-           #slideBody {
+           /*answer button class (. = class, # = id) */
+            #slideBody {
                 background-color: #ddf;
+                height: 100%;
+                width: 100%;
                 
             }
             #questionBox {
                 position: absolute;
                 font-family: fantasy;
-                height: 100px;
+                
                 font-size: 50px;
             }
             #musicPlayer {
                 position: absolute;
                 top: 150px;  
                 height: 60px;
+                width: 10%;
             }
             .answerButtons {
-                position: absolute;
-                top: 200px;
                 background-color: beige;
+                position: absolute;
                 height: 50px;
-                width: 400px;
-             }
+                width: 100%;
+            }
+            #answerA {
+                bottom: 160px; 
+            }
+            #answerB {
+                bottom: 110px; 
+            }
+            #answerC {
+                bottom: 60px; 
+            }
+            #answerD {
+                bottom: 10px; 
+            }
         </style>
         
         <script src="AudioBufferManager.js"></script>
