@@ -5,7 +5,7 @@
         <style>
            /*answer button class (. = class, # = id) */
             Body {
-                background-color: #fdf;
+                background-color: seashell;
                 height: 100%;
                 width: 100%;
                 
