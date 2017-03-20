@@ -12,7 +12,7 @@
             }
             #questionBox {
                 position: absolute;
-                font-family: fantasy;
+                font-family: 'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
                 
                 font-size: 40px;
             }
@@ -27,6 +27,7 @@
                 position: absolute;
                 height: 50px;
                 width: 100%;
+                font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
             }
             #answerA {
                 bottom: 160px; 
