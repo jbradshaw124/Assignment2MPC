@@ -19,9 +19,8 @@
             }
             #musicPlayer {
                 position: absolute;
-                bottom: 210px;  
-                height: 60px;
-                width: 10%;
+                bottom: 210px;
+                width: 100%;
             }
             .answerButtons {
                 background-color: beige;
