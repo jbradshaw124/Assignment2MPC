@@ -3,57 +3,57 @@
         <title>GCSE Music Quiz</title>
         
         <style>
-           /*answer button class (. = class, # = id) */
+            /*answer button class (. = class, # = id) */
             Body {
                 background-color: seashell;
                 height: 100%;
                 width: 100%;
                 
             }
-            #questionBox {
-                position: absolute;
-                font-family: 'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
-                margin: 20px;
-                font-size: 35px;
-                text-align: centre;
-            }
-            #musicPlayer {
-                position: absolute;
-                bottom: 210px;
-                width: 100%;
-            }
-            .answerButtons {
-                background-color: beige;
-                position: absolute;
-                height: 50px;
-                width: 100%;
-                font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
-                font-size: 20px;
-                font-weight: 900;
-                letter-spacing: 0.5px;
-            }
-            #answerA {
-                bottom: 160px; 
-            }
-            #answerB {
-                bottom: 110px; 
-            }
-            #answerC {
-                bottom: 60px; 
-            }
-            #answerD {
-                bottom: 10px; 
-            }
+        #questionBox {
+            position: absolute;
+            font-family: 'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
+            margin: 20px;
+            font-size: 35px;
+            text-align: centre;
+        }
+        #musicPlayer {
+            position: absolute;
+            bottom: 210px;
+            width: 100%;
+        }
+        .answerButtons {
+            background-color: beige;
+            position: absolute;
+            height: 50px;
+            width: 100%;
+            font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
+            font-size: 20px;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+        }
+        #answerA {
+            bottom: 160px;
+        }
+        #answerB {
+            bottom: 110px;
+        }
+        #answerC {
+            bottom: 60px;
+        }
+        #answerD {
+            bottom: 10px;
+        }
         </style>
         
-        <script src="AudioBufferManager.js"></script>
+        <script src="Tone.js"></script>
         
     </head>
     <body width="100%" height="100%">
         <!--Slide Body-->
-
-        <div id= "slideBody">
         
+        <div id= "slideBody">
+            
             <div id= "questionBox">
                 question
             </div>
@@ -61,44 +61,44 @@
                 <audio controls id="audioPlayer"></audio>
             </div>
             <!--<div id= "answerCheck">
-                
-            </div>-->
+             
+             </div>-->
             <div id="answerBox">
-                    <button id="answerA" class="answerButtons" onclick="checkResult(0)"></button>
-                    <br />
-                    <button id="answerB" class="answerButtons" onclick="checkResult(1)"></button>
-                    <br />
-                    <button id="answerC" class="answerButtons" onclick="checkResult(2)"></button>
-                    <br />
-                    <button id="answerD" class="answerButtons" onclick="checkResult(3)"></button>
+                <button id="answerA" class="answerButtons" onclick="checkResult(0)"></button>
+                <br />
+                <button id="answerB" class="answerButtons" onclick="checkResult(1)"></button>
+                <br />
+                <button id="answerC" class="answerButtons" onclick="checkResult(2)"></button>
+                <br />
+                <button id="answerD" class="answerButtons" onclick="checkResult(3)"></button>
                 
             </div>
-        
+            
         </div>
-
-
-
+        
+        
+        
         <script>
             //this is where script goes
-
-        // we need an audio context to use the web audio API
-        var audioContext = new (window.AudioContext || window.webkitAudioContext)();
-    
-        // this audioBufferManager makes it convenient to load audio files
-        var audioBufferManager = new AudioBufferManager(audioContext);
-
-        //TODO: need to add a variable for number of slides
-
-        var correctButton = 0;
-        var slideNumber = 0;
-        var correctAnswerCount = 0;
-
-        window.onload = function() {
-        //first slide
-        loadSlide(0);
-        };
-
- 
+            
+            // we need an audio context to use the web audio API
+            var audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            
+            // this audioBufferManager makes it convenient to load audio files
+            var audioBufferManager = new AudioBufferManager(audioContext);
+            
+            //TODO: need to add a variable for number of slides
+            
+            var correctButton = 0;
+            var slideNumber = 0;
+            var correctAnswerCount = 0;
+            
+            window.onload = function() {
+                //first slide
+                loadSlide(0);
+            };
+        
+        
         // load slides depending on slide number
         function loadSlide(slideNumber)
         {
@@ -107,7 +107,7 @@
             var songFile;
             
             
-                if(slideNumber == 0)
+            if(slideNumber == 0)
             {
                 correctAnswerCount = 0;
                 setupSlide("What woodwind instrument can be heard here?","Flute", "Clarinet", "Bassoon", "Oboe", "audio1.wav");
@@ -158,7 +158,7 @@
                 setupSlide("Name the vocal effect used in the performance?", "Tremolo", "Harmony", "Vibrato", "Whispering", "audio10.mp3");
                 correctButton = 2;
             }
-
+            
             else
             {
                 songFile = "audioFile.mp3";
@@ -177,58 +177,56 @@
             
             
         }
-
+        
         function checkResult(buttonID)
         {
             if(buttonID == correctButton)
             {
                 /*audio should play here but it doesnt work
-                playFromBufferNumber("correct.mp3");*/
+                 */
                 audioPlayer.pause();
+                playFromBufferNumber("correct.mp3");
                 alert("Correct!");
                 //go to next slide and increment correct answer
                 slideNumber ++;
                 correctAnswerCount ++;
             }
             else if(buttonID != correctButton)
-
+            
             {
                 //var answerCheck = document.getElementById("answerCheck");
                 //answerCheck.innerHTML = "Incorrect!";
-                
-                //playFromBufferNumber(incorrect.mp3);
                 audioPlayer.pause();
+                playFromBufferNumber("eddie.mp3");
                 alert("Incorrect!");
                 //goto next slide
                 slideNumber ++;
-        
+                
             }
             loadSlide(slideNumber);
         }
-
+        
         function playFromBufferNumber(song)
         {
-            var currentBuffer = 1;
-            audioBufferManager.createBufferFor(song);
-            audioBufferManager.buffers[0];
-    
-            var audioSource = audioContext.createBufferSource();
-            audioSource.buffer = audioBufferManager.buffers[currentBuffer];
-            audioSource.connect(audioContext.destination);
-            audioSource.start(0);
-    
+            var song = song + "mp3";
+            var player = new Tone.Player({
+                                         "url" : song
+                                         "autostart" : true
+                                         }).toMaster();
+            player.autostart = true;
+            
         }
-
+        
         function setupSlide(question,answerA,answerB,answerC,answerD, songFile)
         {
             // initialising buttons for answers
             var answers = [];
-             answers[0] = document.getElementById("answerA");
-             answers[1] = document.getElementById("answerB");
-             answers[2] = document.getElementById("answerC");
-             answers[3] = document.getElementById("answerD");
-             // initialising audio player for file
-             var Track = document.getElementById("audioPlayer");
+            answers[0] = document.getElementById("answerA");
+            answers[1] = document.getElementById("answerB");
+            answers[2] = document.getElementById("answerC");
+            answers[3] = document.getElementById("answerD");
+            // initialising audio player for file
+            var Track = document.getElementById("audioPlayer");
             
             //initialising question box
             var questionBox = document.getElementById("questionBox");
@@ -243,7 +241,6 @@
             Track.src = songFile;
         }
         
-        </script>
-
+            </script>
+        
     </body>
-</html>
