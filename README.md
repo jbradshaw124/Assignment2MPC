@@ -154,18 +154,15 @@
                 setupSlide("Name the vocal effect used in the performance?", "Tremolo", "Harmony", "Vibrato", "Whispering", "audio10.mp3");
                 correctButton = 2;
             }
-            
             else
             {
-                songFile = "audioFile.mp3";
                 if (correctAnswerCount == 10){
                     alert("Your score was: " + correctAnswerCount + "/10, congratulations!\nClick close to retry");
-                    slideNumber = 10;
-                    
+                    setupSlide("","","","","","");
                 }
                 else {
-                    alert("Your score was: " + correctAnswerCount + "/10. Keep playing until you get full marks.\nClick close to retry");
-                    slideNumber = 0;
+                    alert("Your score was: " + correctAnswerCount + "/10. Keep playing until you get full marks.\nRefresh the page and retry");
+                    setupSlide("","","","","","");
                 }
             }
             
@@ -173,6 +170,7 @@
             
             
         }
+        
         
         function checkResult(buttonID)
         {
@@ -182,21 +180,22 @@
                  */
                 audioPlayer.pause();
                 playFromBufferNumber("correct.mp3");
-                alert("Correct!");
                 //go to next slide and increment correct answer
                 slideNumber ++;
                 correctAnswerCount ++;
+                
+                //alert("Correct!");
             }
-            else if(buttonID != correctButton)
-            
+            else
             {
                 //var answerCheck = document.getElementById("answerCheck");
                 //answerCheck.innerHTML = "Incorrect!";
                 audioPlayer.pause();
-                playFromBufferNumber("eddie.mp3");
-                alert("Incorrect!");
+                playFromBufferNumber("incorrect.wav");
+               
                 //goto next slide
                 slideNumber ++;
+                //alert("Incorrect!");
                 
             }
             loadSlide(slideNumber);
@@ -204,7 +203,7 @@
         
         function playFromBufferNumber(song)
         {
-            var song = song + "mp3";
+            var song = song;
             var player = new Tone.Player({
                                          "url" : song,
                                          "autostart" : true
