@@ -81,11 +81,7 @@
         <script>
             //this is where script goes
             
-            // we need an audio context to use the web audio API
-            var audioContext = new (window.AudioContext || window.webkitAudioContext)();
             
-            // this audioBufferManager makes it convenient to load audio files
-            var audioBufferManager = new AudioBufferManager(audioContext);
             
             //TODO: need to add a variable for number of slides
             
@@ -210,7 +206,7 @@
         {
             var song = song + "mp3";
             var player = new Tone.Player({
-                                         "url" : song
+                                         "url" : song,
                                          "autostart" : true
                                          }).toMaster();
             player.autostart = true;
