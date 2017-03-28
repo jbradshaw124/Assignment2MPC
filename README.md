@@ -31,6 +31,7 @@
             font-size: 20px;
             font-weight: 900;
             letter-spacing: 0.5px;
+            
         }
         #answerA {
             bottom: 160px;
@@ -79,7 +80,7 @@
         
         
         <script>
-            //this is where script goes
+           
             
             
             
@@ -146,7 +147,7 @@
             }
             else if(slideNumber == 8)
             {
-                setupSlide("Which of these timbres best describes the music?","Metallic", "Harsh", "Boomy", "Warm", "audio9.wav");
+                setupSlide("Which of these timbres best describes the music?","Metallic", "Harsh", "Boomy", "Mellow", "audio9.wav");
                 correctButton = 3;
             }
             else if(slideNumber == 9)
@@ -157,12 +158,12 @@
             else
             {
                 if (correctAnswerCount == 10){
-                    alert("Your score was: " + correctAnswerCount + "/10, congratulations!\nClick close to retry");
-                    setupSlide("","","","","","");
+                    setupSlide("Your score was: " + correctAnswerCount + "/10, congratulations!","","","","","");
+                    
                 }
                 else {
-                    alert("Your score was: " + correctAnswerCount + "/10. Keep playing until you get full marks.\nRefresh the page and retry");
-                    setupSlide("","","","","","");
+                   setupSlide("Your score was: " + correctAnswerCount + "/10. Keep playing until you get full marks.\nRefresh the page and retry","","","","","");
+                   
                 }
             }
             
@@ -176,8 +177,7 @@
         {
             if(buttonID == correctButton)
             {
-                /*audio should play here but it doesnt work
-                 */
+                
                 audioPlayer.pause();
                 playFromBufferNumber("correct.mp3");
                 //go to next slide and increment correct answer
@@ -188,8 +188,6 @@
             }
             else
             {
-                //var answerCheck = document.getElementById("answerCheck");
-                //answerCheck.innerHTML = "Incorrect!";
                 audioPlayer.pause();
                 playFromBufferNumber("incorrect.wav");
                
@@ -234,6 +232,13 @@
             answers[3].innerHTML = answerD;
             //adding file to source parameter of audio player
             Track.src = songFile;
+            if (slideNumber == 10){
+                answers[0].style.visibility = "hidden";
+                answers[1].style.visibility = "hidden";
+                answers[2].style.visibility = "hidden";
+                answers[3].style.visibility = "hidden";
+                Track.style.visibility = "hidden";
+            }
         }
         
             </script>
