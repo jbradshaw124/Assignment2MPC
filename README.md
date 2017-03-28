@@ -162,7 +162,7 @@
                     
                 }
                 else {
-                   setupSlide("Your score was: " + correctAnswerCount + "/10. Keep playing until you get full marks.\nRefresh the page and retry","","","","","");
+                   setupSlide("Your score was: " + correctAnswerCount + "/10.\n\n Keep playing until you get full marks.\nRefresh the page and retry","","","","","");
                    
                 }
             }
